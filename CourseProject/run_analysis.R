@@ -10,17 +10,17 @@ run_analysis <- function (dataDir = "UCI HAR Dataset"){
         colNames <- c("ID", "NAME")
         activityLabels <- read.table(fileName, col.names = colNames)
         
-        ##getting variable
+        ##getting variable names
         colNames <- c("ID", "NAME")
         fileName <- paste(dataDir, "features.txt", sep = '/')
         features <- read.table(fileName, col.names = colNames)
         
         ##Extract only the measurements on the mean and standard deviation 
         ##for each measurement. 
-        f <- function(x){ 
-                grepl('-mean()', x, fixed = TRUE) | grepl('std()', x, fixed = TRUE)
+        is_mean_or_std <- function(x){ 
+                grepl('mean()', x, fixed = TRUE) | grepl('std()', x, fixed = TRUE)
         }
-        mainFeatures <- features[sapply(features$NAME, f), ]
+        mainFeatures <- features[sapply(features$NAME, is_mean_or_std), ]
         
         ##Function for getting data
         get_data <- function(type){
