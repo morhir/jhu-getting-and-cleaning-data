@@ -1,12 +1,14 @@
-##CodeBook
-#Full description of data used in the project is available in readme.txt in UCI HAR Dataset folder of this repo
+#CodeBook
+
+##Full description of data used in the project is available in readme.txt in UCI HAR Dataset folder of this repo
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
  
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-The data presented in this assignment is a combined data from test and train original data.
-From the original dataset only the measurements on the mean and standard deviation for each measurement was extracted. Full measurement description is available in features_info.txt
+The data presented in this assignment is a combined data from test and train sets of original data.
+From the original dataset only the measurements on the mean and standard deviation for each variable was extracted. Full variable description is available in features_info.txt
 Columns SUBJECT, ACTIVITY represent volunteere ID and activity names taken by the subject.
+Each row is a mean value over a number of measurment windows of every variable for each subject and activity.
 
 
